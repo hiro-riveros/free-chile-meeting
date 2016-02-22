@@ -141,25 +141,6 @@ $(document).ready(function(){
 		};
 	});
 
-	var getRouteToStore = function(latitude, longitude) {
-		var request = {
-			origin: new google.maps.LatLng('-33.5537001', '-70.631175'), // central or current position
-			destination: new google.maps.LatLng(latitude, longitude),
-			travelMode: google.maps.DirectionsTravelMode.DRIVING
-		};
-		directionsService.route(request, function(response, status) {
-			if (status == google.maps.DirectionsStatus.OK) {
-				directionsDisplay.setDirections(response);
-				var route = response.routes[0];
-				var direction = '';
-				for (var i = 0; i < route.legs[0].steps.length; i++) {
-					direction += route.legs[0].steps[i].instructions + "<br />";
-				};
-				$('#directions').append(direction);
-				$('#directions').removeClass('hide');
-			};
-		});
 
-	};
 
 });
