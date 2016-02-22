@@ -1,0 +1,13 @@
+@media only screen and (min-width: 0) {
+  html {
+    font-size: 14px;
+  }
+  #custom-container
+ {
+   width: 200px;
+ }
+ .card .card-title {
+  font-size: 18px;
+  font-weight: 300;
+}
+}

@@ -15,7 +15,7 @@ function initialize() {
 		center: new google.maps.LatLng(-33.4071127,-70.6071702),
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 		zoom: 11
-	};  
+	};
 	map = new google.maps.Map(document.getElementById("map"), mapOptions);
 	directionsDisplay.setMap(map);
 };
@@ -117,8 +117,8 @@ $(document).ready(function(){
 				+ 	'</div>'
 				+ 	'<div class="card-content">'
 				+			'<span class="card-title activator grey-text text-darken-4">' + order.customerName + '<i class="material-icons right">more_vert</i></span>'
-				+		'	<p class="text-left">coordenadas: <br />'
-				+ 	'&nbsp;&nbsp;latitud: ' + order.coords.latitude + ', longitud ' + order.coords.longitude + '</p>'
+				+		'	<p class="text-left"><b>coordenadas: </b><br />'
+				+ 	'&nbsp;&nbsp;latitud: ' + order.coords.latitude + '<p> &nbsp;&nbsp;longitud ' + order.coords.longitude + '</p>'
 				+		'&nbsp;&nbsp;<a href="#" class="btn-route" data-latitude="' + order.coords.latitude + '" data-longitude="' + order.coords.longitude + '">ver ruta</a>'
 				+ 	'</div>'
 				+ 	'<div class="card-reveal">'
