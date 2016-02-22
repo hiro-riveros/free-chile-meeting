@@ -10,4 +10,9 @@
   font-size: 18px;
   font-weight: 300;
 }
+.card .card-content {
+  padding: 10px;
+  border-radius: 0 0 2px 2px;
+}
+
 }

@@ -6,7 +6,7 @@
 */
 var map;
 var directionDisplay;
-var directionsService = new google.maps.DirectionsService();
+//var directionsService = new google.maps.DirectionsService();
 
 
 function initialize() {

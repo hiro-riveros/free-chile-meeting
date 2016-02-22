@@ -12,8 +12,17 @@
 </head>
 <body onload="initialize();">
 	<ul id="nav-mobile" class="side-nav fixed">
+		<li class="">
+
+			<div class="input-field col s12">
+				<input id="pac-input" class="" type="text"
+				placeholder="Ingrese direcci&oacute;n"></input>
+
+			</div>
+
+		</li>
 		<li class="bold">
-			<a href="index.html" class="waves-effect waves-teal">como llegar</a>
+			<a href="#modal1" class="waves-effect waves-teal  btn modal-trigger">como llegar</a>
 		</li>
 		<li class="bold">
 			<a class="waves-effect waves-teal">crear pedido</a>
@@ -32,10 +41,27 @@
 		<div id="map"></div>
 	</div>
 
+
+	<div id="type-selector" class="controls" style="visibility: hidden;">
+		<input type="radio" name="type" id="changetype-all" >
+		<label for="changetype-all">All</label>
+
+		<input type="radio" name="type" id="changetype-establishment">
+		<label for="changetype-establishment">Establishments</label>
+
+		<input type="radio" name="type" id="changetype-address" >
+		<label for="changetype-address">Addresses</label>
+
+		<input type="radio" name="type" id="changetype-geocode" checked="checked">
+		<label for="changetype-geocode">Geocodes</label>
+	</div>
+
 	<!--Import jQuery before materialize.js-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="http://maps.google.com/maps/api/js?hl=es&libraries=places" type="text/javascript"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=false&libraries=places&callback=init" async defer type="text/javascript"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/googleMaps.js"></script>
 	<script type="text/javascript" src="js/order_detail.js"></script>
+
 </body>
 </html>
