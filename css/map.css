@@ -61,3 +61,22 @@ body ul li a.last {
 .custom-container .card {
 	height: 170px;
 }
+
+.directions {
+	background-color: #fff;
+	border-radius: 2px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	height: 170px;
+	margin: 0.5rem 0 1rem 0;
+	right: 404px;
+	overflow-y: auto;
+	position: absolute;
+	padding: 10px;
+	transition: box-shadow .25s;
+	width: 43%;
+	z-index: 100;
+}
+
+.hide {
+	display: none;
+}
