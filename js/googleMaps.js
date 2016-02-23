@@ -1,4 +1,7 @@
 var map;
+var directionDisplay;
+var directionsService;
+
 
 function init() {
   var mapOptions = {
@@ -6,7 +9,10 @@ function init() {
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     zoom: 11
   };
+  directionsService = new google.maps.DirectionsService();
+  directionsDisplay = new google.maps.DirectionsRenderer();
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  directionsDisplay.setMap(map);
 
 
   var input = /** @type {!HTMLInputElement} */(
@@ -65,10 +71,7 @@ function init() {
       });
     }
 
-    setupClickListener('changetype-all', []);
-    setupClickListener('changetype-address', ['address']);
-    setupClickListener('changetype-establishment', ['establishment']);
-    setupClickListener('changetype-geocode', ['geocode']);
+
   };
 
 
@@ -96,15 +99,16 @@ function init() {
     }
   };
 
-  var getRouteToStore = function(latOrigin, longOrigin , latDestination, lonDestination) {
+  var getRouteToStore = function(latDestination, longDestination,latOrigin, longOrigin ) {
 
     if(latOrigin==0 || longOrigin==0)
     {
 
     }
+
     var request = {
       origin: new google.maps.LatLng('-33.5537001', '-70.631175'), // central or current position
-      destination: new google.maps.LatLng(latitude, longitude),
+      destination: new google.maps.LatLng(latDestination, longDestination),
       travelMode: google.maps.DirectionsTravelMode.DRIVING
     };
     directionsService.route(request, function(response, status) {

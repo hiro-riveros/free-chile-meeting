@@ -132,9 +132,13 @@ $(document).ready(function(){
 	loadOrders();
 
 	$('.btn-route').click(function() {
+
 		if ($(this).data('latitude') != '' && $(this).data('longitude') != '') {
-			$('#directions').addClass('hide');
+
 			$('#directions').empty();
+			$('#collapsible-container').removeClass('hide');
+			
+
 			getRouteToStore($(this).data('latitude'), $(this).data('longitude'));
 		} else {
 			alert('no se han ingresado las coordenadas');
