@@ -109,7 +109,7 @@ function init() {
 
     var request = {
       origin: new google.maps.LatLng('-33.5537001', '-70.631175'), // central or current position
-      destination: new google.maps.LatLng(latitude, longitude),
+      destination: new google.maps.LatLng(latDestination, longDestination),
 
       travelMode: google.maps.DirectionsTravelMode.DRIVING
     };

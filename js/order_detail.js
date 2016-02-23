@@ -17,7 +17,7 @@ function initialize() {
 		zoom: 11
 	};
 	map = new google.maps.Map(document.getElementById("map"), mapOptions);
-	directionsDisplay.setMap(map);
+	
 };
 
 $('.button-collapse').sideNav('show');
@@ -137,7 +137,7 @@ $(document).ready(function(){
 
 			$('#directions').empty();
 			$('#collapsible-container').removeClass('hide');
-			
+
 
 			getRouteToStore($(this).data('latitude'), $(this).data('longitude'));
 		} else {
