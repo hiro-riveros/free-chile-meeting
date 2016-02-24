@@ -69,7 +69,8 @@ body ul li a.last {
 	width: 100%;
 	overflow-y: auto;
 	position: absolute;
-
+	padding: 10px;
+	line-height: 2.5;
 }
 
 .directions-collapse {
@@ -79,12 +80,9 @@ body ul li a.last {
 	overflow-y: auto;
 	position: absolute;
 	margin: 1.5rem 0 1rem 0;
-
 }
 
-
-.collapsible-body
-{
+.collapsible-body {
 	height: 200px;
 }
 
@@ -92,8 +90,36 @@ body ul li a.last {
 	display: none;
 }
 
-#directions.directions
-{
-	padding: 10px;
-	line-height: 2.5;
+.side-nav a {
+	padding: 0 !important;
 }
+
+.waves-effect.waves-blue .waves-ripple {
+  background-color: rgba(25, 118, 210, 1);
+}
+
+nav ul a:hover,
+nav ul a:active {
+	color: #ffffff !important;
+}
+
+.input-field {
+	height: 50px;
+}
+
+@media (min-device-width: 995px) {
+	.display-menu-bar {
+		display: none;
+	}
+}
+
+@media (max-device-width: 994px) {
+	.display-menu-bar {
+		display: block;
+	}
+}
+
+@media (max-device-width: 800px) {
+
+}
+

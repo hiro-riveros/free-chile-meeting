@@ -10,10 +10,10 @@ var directionDisplay;
 
 
 function initialize() {
-	directionsDisplay = new google.maps.DirectionsRenderer();
 	var mapOptions = {
 		center: new google.maps.LatLng(-33.4071127,-70.6071702),
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		disableDefaultUI: true,
 		zoom: 11
 	};
 	map = new google.maps.Map(document.getElementById("map"), mapOptions);

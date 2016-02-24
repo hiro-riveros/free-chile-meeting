@@ -7,6 +7,7 @@ function init() {
 	var mapOptions = {
 		center: new google.maps.LatLng(-33.4071127,-70.6071702),
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		disableDefaultUI: true,
 		zoom: 11
 	};
 	directionsService = new google.maps.DirectionsService();
@@ -126,3 +127,10 @@ function init() {
 			'Error: The Geolocation service failed.' :
 			'Error: Your browser doesn\'t support geolocation.');
 	};
+
+
+$(function() {
+	$('.button-collapse').sideNav();
+});
+
+

@@ -12,6 +12,35 @@
 </head>
 <body onload="loadProducts();">
 
+  <div class="display-menu-bar">
+    <nav class="blue darken-1">
+      <div class="nav-wrapper">
+        <a href="#" data-activates="navigation-drawer" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="side-nav" id="navigation-drawer">
+          <li class="blue darken-2">
+            <div class="input-field blue darken-2">
+              <input id="search" type="search" required>
+              <label for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </li>
+          <li class="bold">
+            <a href="#modal-pedidos" class="waves-effect waves-blue  modal-trigger">Crear pedido.</a>
+          </li>
+          <li class="bold">
+            <a class="waves-effect waves-blue" href="orders.html">Ver pedidos realizados.</a>
+          </li>
+          <li class="bold">
+            <a href="#modal-productos" class="waves-effect waves-blue modal-trigger">Ver productos.</a>
+          </li>
+
+          <li class="bold">
+            <a href="showcase.html" class="last" >Cerrar Session</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
   <ul id="nav-mobile" class="side-nav fixed">
     <li class="search">
@@ -21,13 +50,13 @@
       </div>
     </li>
     <li class="bold">
-      <a href="#modal-pedidos" class="waves-effect waves-teal  modal-trigger">Crear pedido.</a>
+      <a href="#modal-pedidos" class="waves-effect waves-blue modal-trigger">Crear pedido.</a>
     </li>
     <li class="bold">
-      <a class="waves-effect waves-teal" href="orders.html">Ver pedidos realizados.</a>
+      <a href="orders.html" class="waves-effect waves-blue">Ver pedidos realizados.</a>
     </li>
     <li class="bold">
-      <a href="#modal-productos" class="waves-effect waves-teal modal-trigger">Ver productos.</a>
+      <a href="#modal-productos" class="waves-effect waves-blue modal-trigger">Ver productos.</a>
     </li>
 
     <li class="bold">
@@ -99,13 +128,13 @@
         </div>
       </div>
     </div>
-    
+
     <div class="modal-footer" id="btn-add-order-container">
-      <a href="#!" class="waves-effect waves-green btn-flat btn-add-order">Finalizar Pedido</a>
+      <a href="#!" class="waves-effect waves-blue btn-flat btn-add-order">Finalizar Pedido</a>
     </div>
 
     <div class="modal-footer hide" id="btn-send-order-container">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat btn-send-order">Enviar Pedido</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat btn-send-order">Enviar Pedido</a>
     </div>
 
   </div>
@@ -117,7 +146,7 @@
     </div>
 
     <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+      <a href="#!" class=" modal-action modal-close waves-effect waves-blue btn-flat">Cerrar</a>
 
     </div>
   </div>
@@ -127,7 +156,7 @@
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="http://maps.google.com/maps/api/js?sensor=false&libraries=places&callback=init" async defer type="text/javascript"></script>
+  <script src="http://maps.google.com/maps/api/js?libraries=places&callback=init" async defer type="text/javascript"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
   <script type="text/javascript" src="js/materialize.min.js"></script>
