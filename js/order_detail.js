@@ -6,7 +6,7 @@
 */
 var map;
 var directionDisplay;
-var directionsService = new google.maps.DirectionsService();
+//var directionsService = new google.maps.DirectionsService();
 
 
 function initialize() {
@@ -15,9 +15,9 @@ function initialize() {
 		center: new google.maps.LatLng(-33.4071127,-70.6071702),
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 		zoom: 11
-	};  
+	};
 	map = new google.maps.Map(document.getElementById("map"), mapOptions);
-	directionsDisplay.setMap(map);
+	
 };
 
 $('.button-collapse').sideNav('show');
@@ -117,8 +117,8 @@ $(document).ready(function(){
 				+ 	'</div>'
 				+ 	'<div class="card-content">'
 				+			'<span class="card-title activator grey-text text-darken-4">' + order.customerName + '<i class="material-icons right">more_vert</i></span>'
-				+		'	<p class="text-left">coordenadas: <br />'
-				+ 	'&nbsp;&nbsp;latitud: ' + order.coords.latitude + ', longitud ' + order.coords.longitude + '</p>'
+				+		'	<p class="text-left"><b>coordenadas: </b><br />'
+				+ 	'&nbsp;&nbsp;latitud: ' + order.coords.latitude + '<p> &nbsp;&nbsp;longitud ' + order.coords.longitude + '</p>'
 				+		'&nbsp;&nbsp;<a href="#" class="btn-route" data-latitude="' + order.coords.latitude + '" data-longitude="' + order.coords.longitude + '">ver ruta</a>'
 				+ 	'</div>'
 				+ 	'<div class="card-reveal">'
@@ -132,34 +132,19 @@ $(document).ready(function(){
 	loadOrders();
 
 	$('.btn-route').click(function() {
+
 		if ($(this).data('latitude') != '' && $(this).data('longitude') != '') {
-			$('#directions').addClass('hide');
+
 			$('#directions').empty();
+			$('#collapsible-container').removeClass('hide');
+
+
 			getRouteToStore($(this).data('latitude'), $(this).data('longitude'));
 		} else {
 			alert('no se han ingresado las coordenadas');
 		};
 	});
 
-	var getRouteToStore = function(latitude, longitude) {
-		var request = {
-			origin: new google.maps.LatLng('-33.5537001', '-70.631175'), // central or current position
-			destination: new google.maps.LatLng(latitude, longitude),
-			travelMode: google.maps.DirectionsTravelMode.DRIVING
-		};
-		directionsService.route(request, function(response, status) {
-			if (status == google.maps.DirectionsStatus.OK) {
-				directionsDisplay.setDirections(response);
-				var route = response.routes[0];
-				var direction = '';
-				for (var i = 0; i < route.legs[0].steps.length; i++) {
-					direction += route.legs[0].steps[i].instructions + "<br />";
-				};
-				$('#directions').append(direction);
-				$('#directions').removeClass('hide');
-			};
-		});
 
-	};
 
 });

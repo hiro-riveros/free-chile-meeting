@@ -1,4 +1,3 @@
-
 var map;
 var directionDisplay;
 var directionsService;
@@ -110,8 +109,7 @@ function init() {
 
     var request = {
       origin: new google.maps.LatLng('-33.5537001', '-70.631175'), // central or current position
-      destination: new google.maps.LatLng(latitude, longitude),
-
+      destination: new google.maps.LatLng(latDestination, longDestination),
       travelMode: google.maps.DirectionsTravelMode.DRIVING
     };
     directionsService.route(request, function(response, status) {
@@ -126,15 +124,7 @@ function init() {
         $('#directions').removeClass('hide');
       };
     });
-
   };
-
-
-
-
-
-
-
 
   function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
