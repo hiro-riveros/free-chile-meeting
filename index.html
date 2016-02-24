@@ -41,18 +41,74 @@
 
   <div id="modal-pedidos" class="modal">
     <div class="modal-content">
-      <h4>Creacion de pedidos</h4>
+      <h4>agregar pedido</h4>
+      <hr />
+      <br />
 
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="juan" id="first-name" type="text" class="validate">
+          <label for="first-name">ingresa tu nombre</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="bazar 1" id="store-name" type="text" class="validate">
+          <label for="store-name">ingresa nombre de local</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="direccion" id="address" type="text" class="validate">
+          <label for="address">ingresa direccion del local</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="comuna" id="commune" type="text" class="validate">
+          <label for="commune">ingresa la comuna del local</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="producto" type="text" class="validate product">
+          <label for="active">ingresa nombre del producto</label>
+        </div>
+        <div class="input-field col s6">
+          <input placeholder="producto" type="text" class="validate product">
+          <label for="active">ingresa nombre del producto</label>
+        </div>
+        <div class="input-field col s6">
+          <input placeholder="producto" type="text" class="validate product">
+          <label for="active">ingresa nombre del producto</label>
+        </div>
+        <div class="input-field col s6">
+          <input placeholder="producto" type="text" class="validate product">
+          <label for="active">ingresa nombre del producto</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="precio total" id="totalAmount" type="text" class="validate" readonly="readonly">
+          <label for="totalAmount">precio total</label>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal-footer" id="btn-add-order-container">
+      <a href="#!" class="waves-effect waves-green btn-flat btn-add-order">Finalizar Pedido</a>
     </div>
 
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Finalizar Pedido</a>
+    <div class="modal-footer hide" id="btn-send-order-container">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat btn-send-order">Enviar Pedido</a>
     </div>
+
   </div>
-
-
-
-
 
   <div id="modal-productos" class="modal">
     <div class="modal-content">
@@ -75,8 +131,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/create_orders.js"></script>
   <script type="text/javascript" src="js/googleMaps.js"></script>
   <script type="text/javascript" src="js/products_detail.js" ></script>
+
 
   <script>
    $('.button-collapse').sideNav('show');
