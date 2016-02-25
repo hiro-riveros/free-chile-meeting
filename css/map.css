@@ -1,11 +1,13 @@
 html {
 	height: 100%;
+	overflow: hidden;
 }
 
 body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	width: 100%;
 }
 
 body ul {
@@ -90,17 +92,45 @@ body ul li a.last {
 	display: none;
 }
 
+nav ul a:hover,
+nav ul a:active {
+	color: #ffffff !important;
+}
+
+nav a.button-collapse, nav a.button-collapse i {
+	font-size: 2rem;
+}
+
+nav, nav .nav-wrapper i {
+    font-size: 1.5rem;
+    height: 64px;
+    line-height: 40px;
+}
+
+nav ul.hide-on-med-and-down  {
+	width: 60%;
+}
+
+nav ul.hide-on-med-and-down li:first-child {
+	padding-top: 7px;
+}
+
+nav ul.hide-on-med-and-down li {
+  text-align: center;
+  width: 25%;
+  padding-top: 12px;
+}
+
 .side-nav a {
 	padding: 0 !important;
 }
 
-.waves-effect.waves-blue .waves-ripple {
-  background-color: rgba(25, 118, 210, 1);
+nav #pac-input {
+	margin-bottom: 0;
 }
 
-nav ul a:hover,
-nav ul a:active {
-	color: #ffffff !important;
+.waves-effect.waves-blue .waves-ripple {
+  background-color: rgba(25, 118, 210, 1);
 }
 
 .input-field {
